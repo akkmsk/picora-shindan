@@ -6,16 +6,24 @@
     <meta name="robots" content="noindex, nofollow" />
     <meta name="description" content="たった5問でわかる、お金の漏れグセ診断" />
     <title>お金の漏れグセ診断｜PICORA</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Noto+Sans+JP:wght@500;700;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css?v=20260807-36" />
   </head>
   <body>
-    <img class="desktop-background-title" src="assets/hero-title-pc.png" alt="" aria-hidden="true" />
+    <div class="desktop-background-title" aria-hidden="true">
+      <img class="desktop-background-title__badge" src="assets/バッジ／配置枠.svg" alt="" />
+      <div class="desktop-background-title__main">
+        <img class="desktop-background-title__decoration desktop-background-title__decoration--left" src="assets/装飾／左 (1).svg" alt="" />
+        <img class="desktop-background-title__logo" src="assets/タイトルロゴ／本体 (1).svg" alt="" />
+        <img class="desktop-background-title__decoration desktop-background-title__decoration--right" src="assets/装飾／右 (1).svg" alt="" />
+      </div>
+    </div>
 
     <header class="desktop-site-header" aria-label="PICORA">
-      <img src="https://www.figma.com/api/mcp/asset/9b2ac825-f74f-4eeb-bd0b-b804f8e20126.png" alt="PICORA" />
+      <img src="assets/FV／PICORAロゴ.svg" alt="PICORA" />
       <p>お金の漏れグセ診断</p>
     </header>
 
@@ -111,21 +119,29 @@
     <main class="site-shell">
       <section class="hero" aria-labelledby="hero-title">
         <header class="site-header">
-          <img class="site-logo" src="https://www.figma.com/api/mcp/asset/9b2ac825-f74f-4eeb-bd0b-b804f8e20126.png" alt="PICORA" />
+          <img class="site-logo" src="assets/FV／PICORAロゴ.svg" alt="PICORA" />
         </header>
 
         <div class="hero-copy">
           <h1 id="hero-title" class="visually-hidden">たった5問でサクッと診断！お金の漏れグセ診断。知らないうちに損してる原因がわかる！</h1>
-          <img class="hero-title-image" src="assets/hero-title-final.png" alt="" />
+          <div class="hero-title-composition" aria-hidden="true">
+            <img class="hero-title-badge" src="assets/バッジ／配置枠.svg" alt="" />
+            <div class="hero-title-main">
+              <img class="hero-title-decoration hero-title-decoration--left" src="assets/装飾／左 (1).svg" alt="" />
+              <img class="hero-title-logo" src="assets/タイトルロゴ／本体 (1).svg" alt="" />
+              <img class="hero-title-decoration hero-title-decoration--right" src="assets/装飾／右 (1).svg" alt="" />
+            </div>
+          </div>
+          <img class="hero-subcopy" src="assets/hero-subcopy.png" alt="" aria-hidden="true" />
         </div>
 
         <div class="hero-visual" aria-hidden="true">
-          <img class="hero-receipt receipt-top" src="assets/hero-receipt.png" alt="" />
-          <img class="bill bill-left" src="assets/hero-bill.png" alt="" />
+          <img class="hero-receipt receipt-top" src="assets/hero-receipt-left.png" alt="" />
+          <img class="bill bill-left" src="assets/hero-bill.png?v=20260812-2" alt="" />
           <img class="hero-mascot" src="assets/hero-mascot-final.png" alt="" />
           <img class="coin coin-one" src="assets/hero-coin.png" alt="" />
-          <img class="coin-stack" src="assets/hero-coin-stack.png" alt="" />
-          <img class="hero-receipt receipt-right" src="assets/hero-receipt.png" alt="" />
+          <img class="coin-stack" src="assets/hero-coin-stack.png?v=20260812" alt="" />
+          <img class="hero-receipt receipt-right" src="assets/hero-receipt-right.png" alt="" />
           <img class="hero-bubble bubble-right" src="assets/hero-bubble-right.png" alt="" />
           <img class="hero-bubble bubble-left" src="assets/hero-bubble-left.png" alt="" />
         </div>
@@ -137,16 +153,16 @@
         </button>
 
         <ul class="hero-points" aria-label="診断の特徴">
-          <li><img src="assets/feature-clock.svg" alt="" />約1分</li>
+          <li><img class="hero-point-icon" src="assets/feature-clock.svg" alt="" />約1分</li>
           <li class="hero-points__divider" aria-hidden="true"></li>
-          <li><img src="assets/feature-checklist.svg" alt="" />たった5問</li>
+          <li><img class="hero-point-icon" src="assets/feature-checklist.svg" alt="" />たった5問</li>
           <li class="hero-points__divider" aria-hidden="true"></li>
-          <li><img src="assets/feature-no-registration.svg" alt="" />登録不要</li>
+          <li><img class="hero-point-icon" src="assets/feature-no-registration.svg" alt="" />登録不要</li>
         </ul>
       </section>
 
       <section class="problems" aria-labelledby="problems-title">
-        <p class="eyebrow">こんなこと、ない？</p>
+        <p class="eyebrow"><span aria-hidden="true">＼</span>こんなこと、ない？<span aria-hidden="true">／</span></p>
         <h2 id="problems-title">気づかないうちに<br />お金が消えてるかも</h2>
 
         <div class="problem-list">
@@ -160,69 +176,36 @@
           </article>
           <article class="problem-card">
             <img src="assets/problem-sale.png" alt="セールの買い物袋" />
-            <p><strong>限定・セール</strong>に<br />つい反応<br />してしまう</p>
+            <p><strong>限定・セールに</strong><br />つい反応<br />してしまう</p>
           </article>
         </div>
         <img class="peeking-mascot" src="assets/problems-character-area.png" alt="あるあると声をかけるぴこまる" />
       </section>
 
       <section class="types" id="types" aria-labelledby="types-title">
+        <div class="types-panel">
         <div class="section-heading">
           <p>性格でわかる、頑張らない貯め方</p>
           <h2 id="types-title">診断結果は<span>4種類！</span></h2>
         </div>
 
         <div class="result-carousel" aria-label="診断結果タイプ">
+          <button class="carousel-arrow carousel-arrow--prev" type="button" aria-label="前のタイプを見る" disabled>‹</button>
           <div class="result-track">
             <figure class="result-card is-active">
-              <div class="diagnosis-card diagnosis-card--hamster">
-                <img class="diagnosis-card__ribbon" src="assets/card-ribbon.svg" alt="" />
-                <div class="diagnosis-card__visual">
-                  <img src="assets/hamster-karamawari.png" alt="パソコン作業に追われて慌てているハムスター" />
-                </div>
-                <div class="diagnosis-card__caption">
-                  <span class="diagnosis-card__label">カラ周り</span>
-                  <span class="diagnosis-card__name">ハムスター</span>
-                </div>
-              </div>
+              <div class="figma-type-card figma-type-card--hamster" role="img" aria-label="カラ周り ハムスター"></div>
             </figure>
             <figure class="result-card">
-              <div class="diagnosis-card diagnosis-card--crow">
-                <img class="diagnosis-card__ribbon" src="assets/card-ribbon.svg" alt="" />
-                <div class="diagnosis-card__visual">
-                  <img src="assets/crow-kiokusoushitsu.png" alt="ポイントの使い道を思い出せず困っているカラス" />
-                </div>
-                <div class="diagnosis-card__caption">
-                  <span class="diagnosis-card__label">記憶喪失の</span>
-                  <span class="diagnosis-card__name">カラス</span>
-                </div>
-              </div>
+              <div class="figma-type-card figma-type-card--crow" role="img" aria-label="記憶喪失の カラス"></div>
             </figure>
             <figure class="result-card">
-              <div class="diagnosis-card diagnosis-card--toypoodle">
-                <img class="diagnosis-card__ribbon" src="assets/card-ribbon.svg" alt="" />
-                <div class="diagnosis-card__visual">
-                  <img src="assets/toypoodle-gohoubi.png" alt="スイーツと買い物を楽しむトイプードル" />
-                </div>
-                <div class="diagnosis-card__caption">
-                  <span class="diagnosis-card__label">ごほうび依存の</span>
-                  <span class="diagnosis-card__name">トイプー</span>
-                </div>
-              </div>
+              <div class="figma-type-card figma-type-card--toypoodle" role="img" aria-label="ごほうび依存の トイプー"></div>
             </figure>
             <figure class="result-card">
-              <div class="diagnosis-card diagnosis-card--meerkat">
-                <img class="diagnosis-card__ribbon" src="assets/card-ribbon.svg" alt="" />
-                <div class="diagnosis-card__visual">
-                  <img src="assets/meerkat-miihaa-final.png" alt="セールや話題の商品に囲まれたミーアキャット" />
-                </div>
-                <div class="diagnosis-card__caption">
-                  <span class="diagnosis-card__label">ミーハーな</span>
-                  <span class="diagnosis-card__name">ミーアキャット</span>
-                </div>
-              </div>
+              <div class="figma-type-card figma-type-card--meerkat" role="img" aria-label="ミーハーな ミーアキャット"></div>
             </figure>
           </div>
+          <button class="carousel-arrow carousel-arrow--next" type="button" aria-label="次のタイプを見る">›</button>
           <div class="carousel-dots" aria-label="結果タイプを切り替える">
             <button class="is-active" type="button" aria-label="1枚目"></button>
             <button type="button" aria-label="2枚目"></button>
@@ -231,7 +214,12 @@
           </div>
         </div>
 
-        <button class="cta cta-outline" type="button" data-scroll-to="proposal">自分のタイプを調べる</button>
+        <button class="cta cta-outline" type="button" data-start-diagnosis>
+          <span class="cta-tag">無料</span>
+          <span>自分のタイプを診断する</span>
+          <span class="cta-arrow" aria-hidden="true"><img src="assets/cta-arrow.svg" alt="" /></span>
+        </button>
+        </div>
       </section>
 
       <section class="proposal" id="proposal" aria-labelledby="proposal-title">
@@ -252,21 +240,26 @@
       </section>
 
       <footer class="footer">
-        <img src="https://www.figma.com/api/mcp/asset/9b2ac825-f74f-4eeb-bd0b-b804f8e20126.png" alt="PICORA" />
-        <small>© 2024 PICORA. All rights reserved.</small>
+        <nav aria-label="フッターナビゲーション">
+          <a href="https://picora.jp/">会社概要</a>
+          <a href="https://picora.jp/">プライバシーポリシー</a>
+          <a href="https://picora.jp/">利用規約</a>
+        </nav>
+        <small>Copyright © PICORA All Rights Reserved.</small>
       </footer>
     </main>
 
     <section class="diagnosis-screen" aria-label="お金の漏れグセ診断 Q1" hidden>
       <div class="diagnosis-shell">
         <header class="diagnosis-header">
-          <img src="https://www.figma.com/api/mcp/asset/9b2ac825-f74f-4eeb-bd0b-b804f8e20126.png" alt="PICORA" />
+          <img src="assets/FV／PICORAロゴ.svg" alt="PICORA" />
         </header>
 
         <div class="diagnosis-navigation">
           <button class="diagnosis-back" type="button" data-close-diagnosis aria-label="トップへ戻る">
             <img src="assets/question-back-arrow.svg" alt="" />
           </button>
+          <p class="question-number">Q1</p>
         </div>
 
         <div class="diagnosis-progress" aria-label="全5問中1問目">
@@ -275,17 +268,16 @@
 
         <main class="question-stage">
           <section class="question-card" aria-labelledby="question-title">
-            <p class="question-number">Q1</p>
             <h1 id="question-title">給料日が来たとき、<br />最初にしがちなことは？</h1>
             <div class="question-options" role="group" aria-label="Q1の回答">
               <button class="question-option option-a" type="button" data-answer="A" aria-pressed="false">
                 <span class="answer-letter">A</span>
-                <span>細かく計画を立てる</span>
+                <span>今月の予算や貯金額を<br />細かく決める</span>
                 <img src="assets/question-arrow-green.svg" alt="" />
               </button>
               <button class="question-option option-b" type="button" data-answer="B" aria-pressed="false">
                 <span class="answer-letter">B</span>
-                <span>とりあえず安心して、<br />普段どおり過ごす</span>
+                <span>入金を確認して、<br />いつも通り過ごす</span>
                 <img src="assets/question-arrow-green.svg" alt="" />
               </button>
               <button class="question-option option-c" type="button" data-answer="C" aria-pressed="false">
@@ -295,7 +287,7 @@
               </button>
               <button class="question-option option-d" type="button" data-answer="D" aria-pressed="false">
                 <span class="answer-letter">D</span>
-                <span>SNSや友達の<br />おすすめ商品をチェックする</span>
+                <span>SNSで話題の商品を<br />チェックする</span>
                 <img src="assets/question-arrow-green.svg" alt="" />
               </button>
             </div>
@@ -309,6 +301,67 @@
       </div>
     </section>
 
+    <section class="result-screen" aria-label="診断結果" hidden>
+      <div class="result-shell">
+        <header class="result-header">
+          <button class="result-home-link" type="button" data-return-home aria-label="トップへ戻る">
+            <img src="assets/FV／PICORAロゴ.svg" alt="PICORA" />
+          </button>
+        </header>
+        <p class="result-intro">あなたのお金の漏れグセは...</p>
+
+        <main class="result-main">
+          <article class="result-summary-card">
+            <div class="result-ribbon"><img src="assets/card-ribbon.svg" alt="" /></div>
+            <p class="result-type-label">カラ周り</p>
+            <h1 class="result-type-name">ハムスター</h1>
+            <div class="result-character">
+              <img src="assets/hamster-karamawari.png" alt="カラ周りハムスター" />
+            </div>
+
+            <div class="result-details">
+              <div class="result-stats">
+                <div><b>行動力</b><strong>90<small>%</small></strong><i style="--score:90%"></i></div>
+                <div><b>効率度</b><strong>5<small>%</small></strong><i style="--score:5%"></i></div>
+                <div><b>頑張り度</b><strong>25<small>%</small></strong><i style="--score:25%"></i></div>
+              </div>
+              <div class="result-tags"><span>#毎日コツコツ</span><span>#調べすぎ迷子</span><span>#がんばり損</span></div>
+            </div>
+
+            <div class="result-description">
+              <b>POINT</b>
+              <p>節約やポイ活にはとっても前向き！<br />でも、お得な方法を調べたり、いろいろ試したりするうちに、手間ばかり増えているかも。頑張る量を増やすより、効果の高い方法をひとつに絞ることが、貯まる近道です。</p>
+            </div>
+          </article>
+
+          <p class="result-saving-message">自分に合った<br /><strong>貯め方</strong>を見つけよ〜！</p>
+        </main>
+
+        <section class="result-actions">
+          <h2>＼ 診断結果をシェア ／</h2>
+          <div class="share-buttons" aria-label="診断結果をシェア">
+            <a href="#" aria-label="Xでシェア">X</a><a href="#" aria-label="LINEでシェア">LINE</a><a href="#" aria-label="リンクをコピー">URL</a>
+          </div>
+          <button class="cta cta-primary result-retry" type="button" data-retry-diagnosis>
+            <span>もう一度診断する</span><span class="cta-arrow" aria-hidden="true"><img src="assets/cta-arrow.svg" alt="" /></span>
+          </button>
+
+          <h2 class="result-picora-copy">楽しみを減らさず、<br />日常のついでにポイントを。</h2>
+          <img class="result-registration-visual" src="assets/registration-visual.png" alt="PICORAを紹介するぴこまる" />
+          <p class="result-picora-text">PICORAは誰でも、毎日のお買い物や日常のサービス利用で、簡単にポイントを貯められるサービスです。</p>
+          <a class="cta cta-register" href="https://picora.jp/">
+            <span>PICORAに無料登録する</span><span class="cta-arrow" aria-hidden="true">›</span>
+          </a>
+        </section>
+
+        <footer class="result-footer">
+          <img src="assets/FV／PICORAロゴ.svg" alt="PICORA" />
+          <nav><a href="https://blog.picora.jp/">ブログ</a><a href="https://picora.jp/">運営会社</a><a href="https://picora.jp/">利用規約</a><a href="https://picora.jp/">プライバシーポリシー</a></nav>
+          <small>© PICORA</small>
+        </footer>
+      </div>
+    </section>
+
     <div class="cta-floating-bar">
       <button class="cta cta-primary cta-floating" type="button" data-start-diagnosis aria-label="診断をはじめる">
         <span class="cta-tag">無料</span>
@@ -317,6 +370,6 @@
       </button>
     </div>
 
-    <script src="script.js?v=20260807-6"></script>
+    <script src="script.js?v=20260812-3"></script>
   </body>
 </html>
