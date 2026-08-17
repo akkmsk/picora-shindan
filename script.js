@@ -82,51 +82,52 @@ const questions = [
   {
     title: "給料日が来たとき、<br />最初にしがちなことは？",
     answers: [
-      "今月の予算や貯金額を<br />細かく決める",
-      "入金を確認して、<br />いつも通り過ごす",
-      "頑張った自分への<br />ごほうびを買う",
-      "SNSで話題の商品を<br />チェックする",
+      "今月の予算や貯金額を細かく決める",
+      "入金を確認して、いつも通り過ごす",
+      "頑張った自分へのごほうびを買う",
+      "SNSで話題の商品をチェックする",
     ],
   },
   {
     title: "月末に『思ったより<br />お金がない！』となったら？",
     answers: [
-      "節約方法を調べて、<br />新しい方法を試す",
-      "何に使ったのか、<br />あまり思い出せない",
-      "楽しく使えたから<br />仕方ないと思う",
-      "話題のものを<br />買いすぎたかもと思う",
+      "節約方法を調べて、新しい方法を試す",
+      "何に使ったのか、あまり思い出せない",
+      "楽しく使えたから仕方ないと思う",
+      "話題のものを買いすぎたかもと思う",
     ],
   },
   {
     title: "コンビニやネットショップで、<br />ついやってしまうのは？",
     answers: [
       "ポイントや割引を調べるうちに、予定外のものまで買う",
-      "少額だからいいかと、<br />なんとなく買う",
-      "疲れた日にスイーツや<br />ごほうびを買う",
-      "話題の商品や限定品を<br />見つけると買う",
+      "少額だからいいかと、なんとなく買う",
+      "疲れた日にスイーツやごほうびを買う",
+      "話題の商品や限定品を見つけると買う",
     ],
   },
   {
     title: "貯金や家計管理について、<br />一番近いのは？",
     answers: [
-      "管理方法をいろいろ試すけれど、<br />長続きしない",
-      "残高は見るけれど、<br />支出の内訳は把握していない",
-      "貯めたいけれど、今の楽しみも<br />我慢したくない",
-      "周りで話題の方法を見ると、<br />自分も試したくなる",
+      "管理方法をいろいろ試すが、長続きしない",
+      "残高は見るけれど、支出の内訳は把握していない",
+      "貯めたいけれど、今の楽しみも我慢したくない",
+      "周りで話題の方法を見ると、自分も試したくなる",
     ],
   },
   {
     title: "もし自由に使える<br />1万円があったら？",
     answers: [
-      "お得な使い方を念入りに<br />調べてから決める",
-      "日々の買い物で、<br />いつの間にか使い切る",
-      "欲しかったものや<br />特別な体験に使う",
-      "今話題のアイテムや<br />サービスに使う",
+      "お得な使い方を念入りに調べてから決める",
+      "日々の買い物で、いつの間にか使い切る",
+      "欲しかったものや特別な体験に使う",
+      "今話題のアイテムやサービスに使う",
     ],
   },
 ];
 
 const answerTypes = ["A", "B", "C", "D"];
+const resultSlugs = ["hamster", "crow", "toypoodle", "meerkat"];
 const resultContent = [
   { label: "カラ周り", name: "ハムスター", image: "assets/character-hamster.png", alt: "カラ周りハムスター", stats: [90, 5, 25], tags: ["#毎日コツコツ", "#調べすぎ迷子", "#がんばり損"], description: "節約やポイ活にはとっても前向き！<br>でも、お得な方法を調べたり、いろいろ試したりするうちに、手間ばかり増えているかも。頑張る量を増やすより、効果の高い方法をひとつに絞ることが、貯まる近道です。" },
   { label: "記憶喪失の", name: "カラス", image: "assets/character-crow.png", alt: "記憶喪失のカラス", stats: [35, 20, 15], tags: ["#いつの間にか", "#少額の積み重ね", "#記録がカギ"], description: "日々のお買い物を自然体で楽しめるタイプ。<br>ただ、ひとつひとつは小さな出費でも、振り返ると大きくなっていることがありそう。まずは使った金額を見える化するだけで、無理なく貯まりやすくなります。" },
@@ -134,6 +135,7 @@ const resultContent = [
   { label: "ミーハーな", name: "ミーアキャット", image: "assets/character-meerkat.png", alt: "ミーハーなミーアキャット", stats: [80, 40, 55], tags: ["#新しいもの好き", "#限定に弱い", "#予算で安心"], description: "新しいサービスや話題の商品を見つけるのが得意なタイプ。<br>好奇心はそのままに、使ってよい金額を先に決めておくのがおすすめ。予算の中なら、罪悪感なくトレンドを楽しめます。" },
 ];
 let currentQuestionIndex = 0;
+let currentResultIndex = 0;
 let diagnosisAnswers = Array(questions.length).fill(null);
 let questionAdvanceTimer;
 
@@ -170,8 +172,8 @@ const determineResultIndex = () => {
   return answerTypes.indexOf(diagnosisAnswers[diagnosisAnswers.length - 1]);
 };
 
-const showDiagnosisResult = () => {
-  const resultIndex = determineResultIndex();
+const showDiagnosisResult = (resultIndex = determineResultIndex()) => {
+  currentResultIndex = resultIndex;
   const content = resultContent[resultIndex];
   closeDiagnosis();
   if (!resultScreen) return;
@@ -206,6 +208,27 @@ resultHomeButton?.addEventListener("click", () => {
 document.querySelectorAll(".share-buttons a").forEach((button) => {
   button.addEventListener("click", (event) => {
     event.preventDefault();
+    const slug = resultSlugs[currentResultIndex];
+    const content = resultContent[currentResultIndex];
+    const shareUrl = new URL(`share/${slug}.html`, window.location.href).href;
+    const shareText = `私のお金の漏れグセは「${content.label}${content.name}」でした！`;
+
+    if (button.dataset.share === "x") {
+      window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`, "_blank", "noopener,noreferrer");
+      return;
+    }
+
+    if (button.dataset.share === "line") {
+      window.open(`https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(shareUrl)}`, "_blank", "noopener,noreferrer");
+      return;
+    }
+
+    if (button.dataset.share === "url") {
+      navigator.clipboard?.writeText(shareUrl).then(() => {
+        button.textContent = "済";
+        window.setTimeout(() => { button.textContent = "URL"; }, 1400);
+      });
+    }
   });
 });
 
@@ -334,4 +357,11 @@ if (peekingMascot && problemsSection) {
 
     mascotObserver.observe(problemsSection);
   }
+}
+
+const directResultSlug = new URLSearchParams(window.location.search).get("result");
+const directResultIndex = resultSlugs.indexOf(directResultSlug);
+
+if (directResultIndex >= 0) {
+  showDiagnosisResult(directResultIndex);
 }
