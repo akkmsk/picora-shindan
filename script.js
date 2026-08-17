@@ -128,6 +128,7 @@ const questions = [
 
 const answerTypes = ["A", "B", "C", "D"];
 const resultSlugs = ["hamster", "crow", "toypoodle", "meerkat"];
+const shareVersion = "20260817-2";
 const resultContent = [
   { label: "カラ周り", name: "ハムスター", image: "assets/character-hamster.png", alt: "カラ周りハムスター", stats: [90, 5, 25], tags: ["#毎日コツコツ", "#調べすぎ迷子", "#がんばり損"], description: "節約やポイ活にはとっても前向き！<br>でも、お得な方法を調べたり、いろいろ試したりするうちに、手間ばかり増えているかも。頑張る量を増やすより、効果の高い方法をひとつに絞ることが、貯まる近道です。" },
   { label: "記憶喪失の", name: "カラス", image: "assets/character-crow.png", alt: "記憶喪失のカラス", stats: [35, 20, 15], tags: ["#いつの間にか", "#少額の積み重ね", "#記録がカギ"], description: "日々のお買い物を自然体で楽しめるタイプ。<br>ただ、ひとつひとつは小さな出費でも、振り返ると大きくなっていることがありそう。まずは使った金額を見える化するだけで、無理なく貯まりやすくなります。" },
@@ -210,7 +211,7 @@ document.querySelectorAll(".share-buttons a").forEach((button) => {
     event.preventDefault();
     const slug = resultSlugs[currentResultIndex];
     const content = resultContent[currentResultIndex];
-    const shareUrl = new URL(`share/${slug}.html`, window.location.href).href;
+    const shareUrl = new URL(`share/${slug}.html?v=${shareVersion}`, window.location.href).href;
     const shareText = `私のお金の漏れグセは「${content.label}${content.name}」でした！`;
 
     if (button.dataset.share === "x") {
