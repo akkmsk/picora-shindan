@@ -56,7 +56,7 @@ body {
   min-height: 880px;
   background:
     linear-gradient(#d4f7b8, #fbf5b6),
-    url("assets/hero-background.png") center/cover;
+    url("assets/hero-bg.png") center/cover;
 }
 
 .diagnosis-header {
@@ -329,7 +329,7 @@ body.is-result-open .desktop-background-title {
 .result-tags { margin-top: 18px; display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; }
 .result-tags span { padding: 4px 10px; border-radius: 99px; color:var(--result-accent); background:var(--result-card-bg); font-size: 11px; font-weight:700; }
 .result-description { position: relative; color:var(--brown); font-size:13px; font-weight:500; line-height:1.75; }
-.result-description b { position:absolute; top:-18px; left:16px; color:var(--result-accent); font-family:"Mochiy Pop One",sans-serif; font-size:21px; transform:rotate(-4deg); }
+.result-description b { position:absolute; top:-18px; left:16px; color:var(--result-accent); font-family:"Mochiy Pop One",sans-serif; font-size:21px; -webkit-text-stroke:4px #fff; paint-order:stroke fill; transform:rotate(-4deg); }
 .result-description p { margin:0; }
 .result-saving-message { margin: 22px 0 0; text-align:center; color:var(--brown); font-family:"Mochiy Pop One",sans-serif; line-height:1.5; transform:rotate(-2deg); }
 .result-saving-message strong { color:var(--green); font-size:26px; }
@@ -376,7 +376,7 @@ button {
   background-color: #dff5b5;
   background-image:
     linear-gradient(rgba(212, 247, 184, 0.25), rgba(251, 245, 182, 0.32)),
-    url("assets/hero-background.png");
+    url("assets/hero-bg.png");
   background-position: center;
   background-size: cover;
 }
@@ -798,9 +798,7 @@ button {
   position: relative;
   min-height: 602px;
   padding: 52px 14px 40px;
-  background:
-    linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)),
-    url("assets/problems-background.png") center/cover;
+  background: white;
 }
 
 .eyebrow,
@@ -1030,7 +1028,7 @@ button {
 .figma-type-card {
   width: 240px;
   aspect-ratio: 1138 / 1608;
-  background-image: url("assets/type-cards-figma.png");
+  background-image: url("assets/types-cards.png");
   background-repeat: no-repeat;
   background-size: 400% 100%;
 }
